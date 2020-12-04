@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- CSS Stylesheets with Relative Paths -->
+<html lang="en-us">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Web Visualization</title>
+  
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="topnav">
+    <ul>
+    <a class="active" href="index.html">Latitude</a>
+    <div class="topnav-right">
+      <div class="dropdown">
+        <button class="dropbtn">Plots 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="fig1.html">Max Temperature</a>
+          <a href="fig2.html">Humidity</a>
+          <a href="fig3.html">Cloudiness</a>
+          <a href="fig4.html">Wind Speed</a>
+        </div>
+      </div> 
+      <a href="comparison.html">Comparison</a>
+      <a href="data.html">Data</a>
+      </div>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2 id="title">Comparison: Latitud vs. X</h2>
+    <p>Click any plot to get an in-depth analysis.
+    </p>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 id="sub-title1">vs. Max Temperature</h2>
+            <a href="fig1.html">
+                <img id="visualization1" src="assets/images/Fig1.png" width="400">
+            </a>
+            <h2 id="sub-title2">vs. Cloudiness</h2>
+            <a href="fig3.html">
+                <img id="visualization3" src="assets/images/Fig3.png" width="400">
+            </a>
+        </div>
+        <div class="col-md-6">
+            <h2 id="sub-title3">vs. Humidity</h2>
+            <a href="fig2.html">
+                <img id="visualization2" src="assets/images/Fig2.png" width="400">
+            </a>
+            <h2 id="sub-title3">vs. Wind Speed</h2>
+            <a href="fig4.html">
+                <img id="visualization4" src="assets/images/Fig4.png" width="400">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
