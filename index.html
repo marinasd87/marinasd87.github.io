@@ -1,75 +1,56 @@
 <!DOCTYPE html>
-<!-- CSS Stylesheets with Relative Paths -->
-<html lang="en-us">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Web Visualization</title>
-  
-  <!-- Bring in our bootstrap stylesheet -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<html lang="en">
 
-  
-  <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-  
-
-  <div class="topnav">
-    <ul>
-    <a class="active" href="index.html">Latitude</a>
-    <div class="topnav-right">
-      <div class="dropdown">
-        <button class="dropbtn">Plots 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="fig1.html">Max Temperature</a>
-          <a href="fig2.html">Humidity</a>
-          <a href="fig3.html">Cloudiness</a>
-          <a href="fig4.html">Wind Speed</a>
-        </div>
-      </div> 
-      <a href="comparison.html">Comparison</a>
-      <a href="data.html">Data</a>
-    </div>
-    </ul>
-  </div>
 
   <div class="container">
-
-  
-  <div class="row">
-    <div class="col-md-6">
-      <section id="figure">
-        <h2 id="sub-title">Summary: Latitud vs. X</h2>
-        <img id="visualization1" src="assets/images/Fig1.png" width="300" ALIGN ="left"/>
-      </section>
-        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
-        </p>
-        <p>
-          After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitud. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed
-        </p>
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h2>Visualizations</h2>
-      <a href="fig1.html">
-      <img id="visualization1" src="assets/images/Fig1.png" width="200">
-      </a>
-      <a href="fig2.html">
-      <img id="visualization2" src="assets/images/Fig2.png" width="200">
-      </a>
-      <a href="fig3.html">
-      <img id="visualization3" src="assets/images/Fig3.png" width="200">
-      </a>
-      <a href="fig4.html">
-      <img id="visualization4" src="assets/images/Fig4.png" width="200">
-      </a>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
     </div>
   </div>
-</div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+  <!--<script src="./static/js/bonus.js"></script> -->
+  <script src="samples.json"></script>
+  
 </body>
 
 </html>
